@@ -1,7 +1,5 @@
 package ordertaking.domain
 
-import product.domain.Api.getClass
-import zio.ZIO
 import zio.http.*
 
 object Api:
@@ -11,3 +9,5 @@ object Api:
         Response.text("take order")
       }
     )
+
+  def workflow(i: Int) = OrderTakingService.workflow(i)
