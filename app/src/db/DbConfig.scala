@@ -1,4 +1,4 @@
-package share.db
+package db
 
 import zio.config.magnolia.deriveConfig
 import zio.config.typesafe.FromConfigSourceTypesafe

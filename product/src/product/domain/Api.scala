@@ -1,6 +1,5 @@
 package product.domain
 
-import share.db.DbMigrator
 import zio.http.*
 
 object Api:

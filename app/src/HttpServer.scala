@@ -1,6 +1,4 @@
-//import ordertaking.db.Db.dataSourceLive
-//import ordertaking.db.{DbConfig, DbMigrator}
-import share.db.{Db, DbConfig, DbMigrator}
+import db.{Db, DbConfig, DbMigrator}
 import zio.*
 import zio.http.*
 
@@ -16,6 +14,7 @@ object HttpServer extends ZIOAppDefault {
       ++ product.domain.Api.routes
 
   val services = List("ordertaking", "product")
+
   def run =
     (for
       migrator <- ZIO.service[DbMigrator]

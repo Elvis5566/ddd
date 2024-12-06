@@ -1,4 +1,4 @@
-package share.db
+package db
 
 import com.zaxxer.hikari.{HikariConfig, HikariDataSource}
 import io.getquill.SnakeCase

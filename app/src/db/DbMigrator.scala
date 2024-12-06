@@ -1,4 +1,4 @@
-package share.db
+package db
 
 import org.flywaydb.core.Flyway
 import org.flywaydb.core.api.output.MigrateErrorResult
@@ -9,6 +9,7 @@ import javax.sql.DataSource
 class DbMigrator(ds: DataSource) {
   import DbMigrator.*
 
+  // https://stackoverflow.com/a/59333438
   def migrate(schema: String): Task[Unit] = {
     ZIO
       .attempt(
